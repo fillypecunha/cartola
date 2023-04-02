@@ -1,0 +1,173 @@
+div#top{
+    background-color: rgb(255, 255, 255);;
+    padding: -5%;
+    justify-content: center;
+    width: 46%;
+    display: flex;
+    margin: auto;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+div#front{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 30px  rgba(0, 0, 0, 0.836);
+    border-radius: 9px;
+    width: 90%;
+    height: 510px;
+    display: flex;
+    margin: auto;
+    justify-content: space-around, justify;
+    
+}
+
+body{
+    height: 100vh;
+    background-image: url(../images/campoBackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Verdana;
+}
+.butt{
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+}
+.addBtn{
+    width: 30px;
+    height: 30px;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: green;
+    border-radius: 15px;
+    border: none;
+    margin-top: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    
+}
+
+.delBtn{
+    width: 30px;
+    height: 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(168, 13, 13, 0.973);
+    border-radius: 15px;
+    border: none;
+    margin-top: 5px;
+    cursor: pointer;
+    color: white;
+    
+}
+.spans{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    padding: 0px 30px 0px 30px;
+    justify-content: space-between;
+    border: 1px solid rgba(170, 170, 170, 0.377);
+}
+.spans > p{
+    align-self: center;
+}
+
+#listDisp{
+    height: 400px;
+    overflow-y: scroll;
+}
+.lists{
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.spans:hover{
+    background-color: rgb(197, 197, 197);
+}
+
+/*div{
+    padding: 10px;
+    margin: auto;
+    border: 4px;
+    align-content: center;
+}*/
+h1{
+    text-align: center;
+    
+}
+h2{
+    text-align: center;
+}
+h2#left{
+    color: rgb(9, 179, 9);
+}
+h2#right{
+    color: rgb(255, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+div#img{
+    justify-self: justify;  
+    width: 100%;
+    height: 510px;
+    background-color: rgb(58, 126, 80) ;
+}
+img{
+    border-radius: 16%;
+    height: 100%;
+}
+div#esqerd{
+    width: 100%;
+    height: 90%;
+    
+}
+div#direit{
+    width: 100%;
+    overflow: auto;
+    
+}
+#gol{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 100px;
+    right: 200px;
+    top: 170px;
+    
+}.zaga{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    right: -50px;
+    top: -180px;
+    margin: 8px;
+    
+}
+.meio{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    right: -50px;
+    top: -360px;
+    margin: 8px; 
+}
+.ataque{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    right: -80px;
+    top: -520px;
+    margin: 15px;  
+}
+.messi{
+    width: 40px;
+    height: auto;
+    border-radius: auto;
+}
