@@ -1,42 +1,78 @@
 //Variáveis dos elementos
 const listEsc = document.getElementById('listEsc')
 const listDisp = document.getElementById('listDisp')
+const campo = document.getElementById('img')
 
 //Arrays das listas
 // Ata == 1 Mei == 2 Lat == 3 Zag == 4 Gol ==5
 let arrayEsc = []
 let arrayDisp = [
-    { id: "player1", name: "Vinicius Jr", shirt:'20', position: 'ATA', nposition: 1},
-    { id: "player2", name: "Richarlison", shirt:'09', position: 'ATA', nposition: 1  },
-    { id: "player3", name: "Raphinha", shirt:'11', position: 'ATA', nposition: 1  },
-    { id: "player4", name: "Neymar Jr", shirt:'10', position: 'ATA', nposition: 1  },
-    { id: "player5", name: "Paqueta", shirt:'07', position: 'MEI', nposition: 2 },
-    { id: "player6", name: "Casemiro", shirt:'05', position: 'MEI', nposition: 2  },
-    { id: "player7", name: "Danilo", shirt:'02', position: 'LAT', nposition: 3  },
-    { id: "player8", name: "E. Militão", shirt:'14', position: 'LAT', nposition: 3  },
-    { id: "player9", name: "T. Silva", shirt:'03', position: 'ZAG', nposition: 4  },
-    { id: "player10", name: "Marquinhos", shirt:'4', position: 'ZAG', nposition: 4  },
-    { id: "player11", name: "Alisson", shirt:'01', position: 'GOL', nposition: 5  },
-    { id: "player12", name: "Messi", shirt:'10', position: 'ATA', nposition: 1  },
-    { id: "player13", name: "C. Ronaldo", shirt:'07', position: 'ATA', nposition: 1  },
-    { id: "player14", name: "Modric", shirt:'10', position: 'MEI', nposition: 2  },
-    { id: "player15", name: "Fagner", shirt:'23', position: 'LAT', nposition: 3  },
-    { id: "player16", name: "S. Ramos", shirt:'04', position: 'ZAG', nposition: 4  },
-    { id: "player17", name: "D.Alaba", shirt:'04', position: 'ZAG', nposition: 4  },
-    { id: "player18", name: "Mbappe", shirt:'07', position: 'ATA', nposition: 1  },
-    { id: "player19", name: "Grieszman", shirt:'10', position: 'MEI', nposition: 2  },
-    { id: "player20", name: "Halland", shirt:'09', position: 'ATA', nposition: 1  },
-    { id: "player21", name: "Alphonso Davies", shirt:'19', position: 'LAT', nposition: 3  },
-    { id: "player22", name: "Antony", shirt:'21', position: 'ATA', nposition: 1  },
-    { id: "player23", name: "Rodrygo", shirt:'19', position: 'MEI', nposition: 2  },
-    { id: "player24", name: "kvaratskeila", shirt:'77', position: 'ATA', nposition: 1},
-    { id: "player25", name: "R.Leao", shirt:'17', position: 'ATA', nposition: 1},
-    { id: "player26", name: "Courtois", shirt:'01', position: 'GOL', nposition: 5 }
+    { id: "player1", name: "Vinicius Jr", shirt:'20', position: 'ATA', nposition: 1,image:new Image() },
+    { id: "player2", name: "Richarlison", shirt:'09', position: 'ATA', nposition: 1,image:new Image() },
+    { id: "player3", name: "Raphinha", shirt:'11', position: 'ATA', nposition: 1, image:new Image()},
+    { id: "player4", name: "Neymar Jr", shirt:'10', position: 'ATA', nposition: 1 ,image:new Image() },
+    { id: "player5", name: "Paqueta", shirt:'07', position: 'MEI', nposition: 2,image:new Image() },
+    { id: "player6", name: "Casemiro", shirt:'05', position: 'MEI', nposition: 2,image:new Image()  },
+    { id: "player7", name: "Danilo", shirt:'02', position: 'LAT', nposition: 3, image:new Image() },
+    { id: "player8", name: "E. Militão", shirt:'14', position: 'LAT', nposition: 3, image:new Image() },
+    { id: "player9", name: "T. Silva", shirt:'03', position: 'ZAG', nposition: 4, image:new Image() },
+    { id: "player10", name: "Marquinhos", shirt:'4', position: 'ZAG', nposition: 4,image:new Image()  },
+    { id: "player11", name: "Alisson", shirt:'01', position: 'GOL', nposition: 5, image:new Image() },
+    { id: "player12", name: "Messi", shirt:'10', position: 'ATA', nposition: 1, image:new Image() },
+    { id: "player13", name: "C. Ronaldo", shirt:'07', position: 'ATA', nposition: 1,  image:new Image()},
+    { id: "player14", name: "Modric", shirt:'10', position: 'MEI', nposition: 2, image:new Image() },
+    { id: "player15", name: "Fagner", shirt:'23', position: 'LAT', nposition: 3,image:new Image()  },
+    { id: "player16", name: "S. Ramos", shirt:'04', position: 'ZAG', nposition: 4, image:new Image() },
+    { id: "player17", name: "D.Alaba", shirt:'04', position: 'ZAG', nposition: 4, image:new Image() },
+    { id: "player18", name: "Mbappe", shirt:'07', position: 'ATA', nposition: 1, image:new Image() },
+    { id: "player19", name: "Grieszman", shirt:'10', position: 'MEI', nposition: 2, image:new Image() },
+    { id: "player20", name: "Halland", shirt:'09', position: 'ATA', nposition: 1  ,image:new Image()},
+    { id: "player21", name: "Alphonso Davies", shirt:'19', position: 'LAT', nposition: 3 ,image:new Image() },
+    { id: "player22", name: "Antony", shirt:'21', position: 'ATA', nposition: 1,image:new Image()  },
+    { id: "player23", name: "Rodrygo", shirt:'19', position: 'MEI', nposition: 2 ,image:new Image() },
+    { id: "player24", name: "kvaratskeila", shirt:'77', position: 'ATA', nposition: 1,image:new Image()},
+    { id: "player25", name: "R.Leao", shirt:'17', position: 'ATA', nposition: 1,image:new Image()},
+    { id: "player26", name: "Courtois", shirt:'01', position: 'GOL', nposition: 5 ,image:new Image()}
   
   
   
 
 ]
+
+
+arrayDisp[0].src = "./imagens/vini.jpg";
+arrayDisp[1].src = "./imagens/richarlison.webp";
+arrayDisp[2].src = "./imagens/raphinha.jpg";
+arrayDisp[3].src = "./imagens/neymar.jpg";
+arrayDisp[4].src = "./imagens/paqueta.jpg";
+arrayDisp[5].src = "./imagens/casemiro.jpg";
+arrayDisp[6].src = "./imagens/danilo.jpg";
+arrayDisp[7].src = "./imagens/militao.jpg";
+arrayDisp[8].src = "./imagens/thiago.jpg";
+arrayDisp[9].src = "./imagens/marquinhos.jpg";
+arrayDisp[10].src = "./imagens/alisson.jpg";
+arrayDisp[11].src = "./imagens/messi.jpg";
+arrayDisp[12].src = "./imagens/cr7.jpg";
+arrayDisp[13].src = "./imagens/modric.jpg";
+arrayDisp[14].src = "./imagens/fagner.jpg";
+arrayDisp[15].src = "./imagens/ramos.jpg";
+arrayDisp[16].src = "./imagens/alaba.jpg";
+arrayDisp[17].src = "./imagens/mbappe.jpg";
+arrayDisp[18].src = "./imagens/griemazn.jpg";
+arrayDisp[19].src = "./imagens/haaland.jpg";
+arrayDisp[20].src = "./imagens/davies.jpg";
+arrayDisp[21].src = "./imagens/antony.jpg";
+arrayDisp[22].src = "./imagens/rodrygo.jpg";
+arrayDisp[24].src = "./imagens/kvaratskheila.jpg";
+arrayDisp[25].src = "./imagens/leao.jpg"; 
+
+
+arrayDisp.forEach((i) => {
+  campo.innerHTML += `<span id="gol" class="btn btn-outline-success"> <img src="${i.src} "></span>`
+
+}); 
+
+
 
 const refresh = () =>{
     renderDom(arrayDisp,arrayEsc)
@@ -56,9 +92,9 @@ const renderDom = (arrayDis, arrayEs) => {
           <p><b>${item.position}</b>  - ${item.name} ${item.shirt}</p>
           <button class ="addBtn" id="${item.id}" value="${item.position}">+</button>
           </span>
-          </li>`;
+          </li>` ;
     });
-
+   
     arrayEs.forEach((item) => {
         listEsc.innerHTML += `<li class="butt">
             <span class="spans esc ${item.position}" id="${item.id}">
@@ -167,8 +203,7 @@ window.addEventListener("load", () => {
     refresh()
 });
 
-const img = new Image();
-img.src="messi.jpg";
+
 
 img.onload= function () {
   const canvas= document.createElement("canvas")
