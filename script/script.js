@@ -80,14 +80,12 @@ const refresh = () =>{
 
 function image(images) {
 }
-image(arrayDisp);
+image(arrayEsc);
   
 
 function image(images) {
-  zagueiro.forEach((images) => {
-    const todos = document.querySelector('span');
-  todos.innerHTML+= `<img src="${images.src} ">`
-
+document.querySelectorAll('span') .forEach((images) => {
+  images.innerHTML+= `<img src="${image.src} ">`
 
 });
 
