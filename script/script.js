@@ -2,6 +2,9 @@
 const listEsc = document.getElementById('listEsc')
 const listDisp = document.getElementById('listDisp')
 const campo = document.getElementById('img')
+const spans = document.getElementById('gol')
+const div = document.querySelector('#zag');
+const zagueiro = document.querySelectorAll('span');
 
 //Arrays das listas
 // Ata == 1 Mei == 2 Lat == 3 Zag == 4 Gol ==5
@@ -40,42 +43,54 @@ let arrayDisp = [
 ]
 
 
-arrayDisp[0].src = "./imagens/vini.jpg";
-arrayDisp[1].src = "./imagens/richarlison.webp";
-arrayDisp[2].src = "./imagens/raphinha.jpg";
-arrayDisp[3].src = "./imagens/neymar.jpg";
-arrayDisp[4].src = "./imagens/paqueta.jpg";
-arrayDisp[5].src = "./imagens/casemiro.jpg";
-arrayDisp[6].src = "./imagens/danilo.jpg";
-arrayDisp[7].src = "./imagens/militao.jpg";
-arrayDisp[8].src = "./imagens/thiago.jpg";
-arrayDisp[9].src = "./imagens/marquinhos.jpg";
-arrayDisp[10].src = "./imagens/alisson.jpg";
-arrayDisp[11].src = "./imagens/messi.jpg";
-arrayDisp[12].src = "./imagens/cr7.jpg";
-arrayDisp[13].src = "./imagens/modric.jpg";
-arrayDisp[14].src = "./imagens/fagner.jpg";
-arrayDisp[15].src = "./imagens/ramos.jpg";
-arrayDisp[16].src = "./imagens/alaba.jpg";
-arrayDisp[17].src = "./imagens/mbappe.jpg";
-arrayDisp[18].src = "./imagens/griemazn.jpg";
-arrayDisp[19].src = "./imagens/haaland.jpg";
-arrayDisp[20].src = "./imagens/davies.jpg";
-arrayDisp[21].src = "./imagens/antony.jpg";
-arrayDisp[22].src = "./imagens/rodrygo.jpg";
-arrayDisp[24].src = "./imagens/kvaratskheila.jpg";
-arrayDisp[25].src = "./imagens/leao.jpg"; 
+arrayDisp[0].src = "./images/vini.jpg";
+arrayDisp[1].src = "./images/richarlison.webp";
+arrayDisp[2].src = "./images/raphinha.jpg";
+arrayDisp[3].src = "./images/neymar.jpg";
+arrayDisp[4].src = "./images/paqueta.jpg";
+arrayDisp[5].src = "./images/casemiro.jpg";
+arrayDisp[6].src = "./images/danilo.jpg";
+arrayDisp[7].src = "./images/militao.jpg";
+arrayDisp[8].src = "./images/thiago.jpg";
+arrayDisp[9].src = "./images/marquinhos.webp";
+arrayDisp[10].src = "./images/alisson.jpg";
+arrayDisp[11].src = "./images/messi.jpg";
+arrayDisp[12].src = "./images/cr7.jpg";
+arrayDisp[13].src = "./images/modric.jpg";
+arrayDisp[14].src = "./images/fagner.jpg";
+arrayDisp[15].src = "./images/ramos.jpg";
+arrayDisp[16].src = "./images/alaba.jpg";
+arrayDisp[17].src = "./images/mbappe.jpg";
+arrayDisp[18].src = "./images/griemazn.jpg";
+arrayDisp[19].src = "./images/haaland.jpg";
+arrayDisp[20].src = "./images/davies.jpg";
+arrayDisp[21].src = "./images/antony.jpg";
+arrayDisp[22].src = "./images/rodrygo.webp";
+arrayDisp[24].src = "./images/kvaratskhelia.jpg";
+arrayDisp[25].src = "./images/leao.webp"; 
 
 
-arrayDisp.forEach((i) => {
-  campo.innerHTML += `<span id="gol" class="btn btn-outline-success"> <img src="${i.src} "></span>`
 
-}); 
 
 
 
 const refresh = () =>{
-    renderDom(arrayDisp,arrayEsc)
+    renderDom(arrayDisp,arrayEsc,image)
+}
+
+function image(images) {
+}
+image(arrayDisp);
+  
+
+function image(images) {
+  zagueiro.forEach((images) => {
+    const todos = document.querySelector('span');
+  todos.innerHTML+= `<img src="${images.src} ">`
+
+
+});
+
 }
 
 //Renderiza os players na tela
